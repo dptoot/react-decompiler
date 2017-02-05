@@ -8,8 +8,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/karma/bin/karma start karma.conf.js",
-    "prepublish": "mkdir dist; node_modules/babel/bin/babel.js src/decompiler.js --out-file dist/decompiler.js; node_modules/babel/bin/babel.js src/stringify-object.js --out-file dist/stringify-object.js"
+    "test": "karma start karma.conf.js",
+    "prepublish": "mkdir dist && babel src/decompiler.js --out-file dist/decompiler.js && babel src/stringify-object.js --out-file dist/stringify-object.js"
   },
   "author": {
     "name": "Rogério Chaves",
@@ -27,13 +27,14 @@
     "karma-phantomjs-launcher": "*",
     "phantomjs": "^1.9.18",
     "phantomjs-polyfill": "0.0.1",
-    "react": "^0.14.1"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "dependencies": {
     "is-plain-obj": "^1.0.0",
     "is-regexp": "^1.0.0",
     "js-beautify": "^1.5.10",
     "object-assign": "^4.0.1",
-    "react-addons-test-utils": "^0.14.1"
+    "react-addons-test-utils": "^15.4.2"
   }
 }
